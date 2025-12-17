@@ -24,3 +24,11 @@ figure
     font-style:italic;
     font-weight:150;
 }
+ol
+{
+    list-style:upper-roman;
+}
+ul {
+    list-style: georgian;
+    /*list-style-image:url('cpu.ico');*/
+}
