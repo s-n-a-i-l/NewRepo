@@ -1,0 +1,34 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+    font-size: 24px;
+    /*  font-family:'Segoe UI';*/
+    font-family: 'Work Sans';
+    font-weight:250;
+}
+
+h3
+{
+    font-style:italic;
+    text-decoration:underline;
+}
+
+p
+{
+    /*name:value;*/
+    text-align: justify;
+    text-indent: 32px;
+}
+figure
+{
+    text-align:center;
+    font-style:italic;
+    font-weight:150;
+}
+ol
+{
+    list-style:upper-roman;
+}
+ul {
+    list-style: georgian;
+    /*list-style-image:url('cpu.ico');*/
+}

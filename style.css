@@ -1,34 +1,12 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
-    font-size: 24px;
-    /*  font-family:'Segoe UI';*/
+    font-size: 32px;
     font-family: 'Work Sans';
-    font-weight:250;
-}
-
-h3
-{
-    font-style:italic;
-    text-decoration:underline;
-}
-
-p
-{
-    /*name:value;*/
-    text-align: justify;
-    text-indent: 32px;
-}
-figure
-{
-    text-align:center;
-    font-style:italic;
-    font-weight:150;
-}
-ol
-{
-    list-style:upper-roman;
-}
-ul {
-    list-style: georgian;
-    /*list-style-image:url('cpu.ico');*/
+    /* background-image: url(https://as2.ftcdn.net/jpg/00/70/67/17/1000_F_70671721_a9x3dgqRTEcOY5PX4hZ0Y3PvaIzMiQg8.jpg);
+    height: 100vh;wiev-port-heigt
+    
+    color:aliceblue;*/
+    background-image:linear-gradient(limegreen,pink);
+    background-attachment: fixed;
 }
