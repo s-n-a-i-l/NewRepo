@@ -28,7 +28,52 @@ ol
 {
     list-style:upper-roman;
 }
-ul {
+ul 
+{
     list-style: georgian;
     /*list-style-image:url('cpu.ico');*/
 }
+a 
+{
+    color:darkgoldenrod;
+}
+a:visited
+{
+    color:seagreen;
+}
+a:hover
+{
+    /*font-weight:500;не работает*/
+   /* font-size:32px;*/
+    /*padding:0;*/
+    color:mediumseagreen;
+}
+.table-of-contents, #table-of-contents {
+    background-image: linear-gradient(to bottom right, gray, brown);
+}
+.header
+{              /*x      y   blure*/
+    text-shadow:0px 0px 8px green;
+}
+#table-of-contents > li > a, #table-of-contents > li > a:visited {
+    font-weight: 500;
+    color: darkblue;
+}
+#table-of-contents > li > ul > li > a, #table-of-contents > li > ul > li > a:visited {
+    font-weight: 500;
+}
+
+table 
+{
+    margin: 0 auto;
+    text-align: center;
+    border: solid 2px;
+    border-spacing:0;/*интервал между границами ячеек*/
+}
+th,td
+{
+    border:solid 1px;
+}
+ 
+
+

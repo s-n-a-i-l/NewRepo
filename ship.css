@@ -1,0 +1,42 @@
+﻿body
+{
+}
+table 
+{
+    height:1000px;
+    width:auto;
+    border: solid 1px;
+    border-spacing: 0; /*интервал между границами ячеек*/
+}
+
+td,th
+{
+    width: 1000px;
+    height:20px;
+    border: solid 1px;
+   /*color: blueviolet;*/
+}
+.sun
+{
+    background-color:yellow;
+}
+.sky
+{
+    background-color:lightblue;
+}
+.mast
+{
+    background-color: peru;
+}
+.flag
+{
+    background-color:red;
+}
+.board 
+{
+    background-color:saddlebrown;
+}
+.sea
+{
+    background-color:blue;
+}
