@@ -1,0 +1,13 @@
+﻿body
+{
+}
+form
+{
+    width:25%;
+}
+form > div  /*если внутрь формы вложен див то*/
+{
+    text-align:right;
+    border:solid 1px;
+    margin:10px;
+}

@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>WedForms</title>
+    <link rel="stylesheet" href="forms.css" />
+</head>
+<body>
+    <form action="#file.php" method="get">
+        <div>
+            <label for="last-name">Фамилия:</label>
+            <input type="text" id="last-name" placeholder="Фамилия">
+        </div>
+        <div>
+            <label for="first-name">Имя:</label>
+            <input type="text" id="first-name" placeholder="Имя" minlength="2" maxlength="15">
+        </div>
+        <div>
+            <label for="password"> Пароль:</label>
+            <input type="password" id="password" minlength="8" placeholder="Пароль" />
+        </div>
+        <div>
+            <label for="birth-date">Дата рождения:</label>
+            <input type="date" id="birth-date" min="1945-01-01" max="2011-12-31"/>
+        </div>
+        <div>
+            <label for="e-mail">E-mail:</label>
+            <input type="email" id="e-mail"/>
+        </div>
+        <fieldset>
+            <legend>какие языки Вы знаете</legend>
+            <input type="checkbox" id="russian">
+            <label for="russian">Русский</label><br>
+            <input type="checkbox" id="english">
+            <label for="english">English</label><br>
+            <input type="checkbox" id="espaniol">
+            <label for="espaniol">Espaniol</label><br>
+            <input type="checkbox" id="italiano">
+            <label for="italiano">Italiano</label><br>
+            <input type="checkbox" id="francias">
+            <label for="francias">Francias</label>
+        </fieldset>
+        <fieldset>
+            <legend>Выберите форму обучения</legend>
+            <input type="radio" name="study-form" id="stacionar"/><label for=" stacionar">Cтационар</label><br>
+            <input type="radio" name="study-form" id="semistacionar"/><label for=" semistacionar">Полустационар</label><br>
+        </fieldset>
+        <input type="submit" value="Отправить"/>
+    </form>
+</body>
+</html>

@@ -63,17 +63,45 @@ a:hover
     font-weight: 500;
 }
 
+#margin-and-padding
+{
+    border:solid 1px;
+    /*margin:20px 50px 150px; Отступы применяются начиная от верхней границы по часовой стрелке*/
+    margin:20px 50px ;/*внешний отступ верх-низ лево-право*/
+    padding:0 50px;/*внутренний отступ*/
+}
+
 table 
 {
-    margin: 0 auto;
+    margin:25px auto;
     text-align: center;
     border: solid 2px;
     border-spacing:0;/*интервал между границами ячеек*/
+    box-shadow:15px -25px 10px 0 gray;
+
+}
+table>caption
+{
+    color:whitesmoke;
 }
 th,td
 {
     border:solid 1px;
 }
- 
+tr:hover 
+{
+    box-shadow:inset 0px -5px 5px 0px gray;
+}
+thead th 
+{
+    color: aliceblue;
+    padding: 15px 25px;
+    background-color: burlywood;
+    border:solid 1px black;
+}
+tbody th /*вложен на любом уровне*/
+{
+    text-align:left;
+}
 
 
