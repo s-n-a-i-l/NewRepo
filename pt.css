@@ -55,12 +55,12 @@ td
     font-size: 14px;
 }
 .periodic td {
-    position: relative; /* Основа для tooltip */
-    cursor: pointer; /* Рука при hover */
+    position: relative;
+    cursor: pointer; 
 }
 
 .periodic td:hover {
-    transform: scale(1.05); /* Лёгкое увеличение */
+    transform: scale(1.05); /* лёгкое увеличение */
     z-index: 10;
 }
 
