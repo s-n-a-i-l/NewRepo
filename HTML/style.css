@@ -1,0 +1,12 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-size: 32px;
+    font-family: 'Work Sans';
+    /* background-image: url(https://as2.ftcdn.net/jpg/00/70/67/17/1000_F_70671721_a9x3dgqRTEcOY5PX4hZ0Y3PvaIzMiQg8.jpg);
+    height: 100vh;wiev-port-heigt
+    
+    color:aliceblue;*/
+    background-image:linear-gradient(limegreen,pink);
+    background-attachment: fixed;
+}
