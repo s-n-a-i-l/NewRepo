@@ -3,11 +3,32 @@
 }
 form
 {
-    width:25%;
+    width:50%;
 }
 form > div  /*если внутрь формы вложен див то*/
 {
     text-align:right;
     border:solid 1px;
     margin:10px;
+}
+select
+{
+    width:100%;
+    margin:15px 0;
+
+}
+option
+{
+    text-align:center;
+}
+div > h2
+{
+    text-align: center;
+}
+.eula
+{
+    width:95%;
+    height:300px;
+    overflow:scroll;
+    padding:10px;
 }
