@@ -44,3 +44,41 @@ function switchBackground()
     ---------------------
     */
 }
+document.addEventListener
+    (
+        "mousemove",
+        function (event)
+        {
+            let x = event.clientX;
+            let y = event.clientY;
+            document.getElementById("mouse").innerHTML = `X = ${x}, Y =${y}`;
+
+        }
+);
+
+//////////////////////////////////////////////////////////time/////////
+//DOM- document object model
+
+function addLeadingZero(number)
+{
+    return number < 10 ? "0" + number : number;
+}
+document.body.onload = function tick_timer()
+{
+    let time = new Date();
+    document.getElementById("full-time").innerHTML = time;
+
+    setTimeout(tick_timer, 100);
+
+    document.getElementById("hours").innerHTML = addLeadingZero(time.getHours());
+    document.getElementById("minutes").innerHTML = addLeadingZero(time.getMinutes());
+    document.getElementById("seconds").innerHTML = addLeadingZero(time.getSeconds());
+
+    document.getElementById("year").innerHTML = addLeadingZero(time.getFullYear());
+    document.getElementById("month").innerHTML = addLeadingZero(time.getMonth() + 1);
+    document.getElementById("day").innerHTML = addLeadingZero(time.getDate());
+    document.getElementById("day-of-week").innerHTML = time.toLocaleDateString("ru", { weekday: "long" });
+
+    document.getElementById("current-date").style.visibility = document.getElementById("show-date").checked ? "visible" : "hidden";
+    document.getElementById("day-of-week").style.visibility = document.getElementById("show-weekday").checked ? "visible" : "hidden";
+}

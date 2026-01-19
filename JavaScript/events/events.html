@@ -10,28 +10,111 @@
 <body class="white">
     <div id="header">
         <div>Header</div>
+        <span id="mouse">
+
+        </span>
         <div style="display:flex">
             <label for="delay">Delay: </label>
-            <input type="number" id="delay" min="1" max="5" value="3"/>
+            <input type="number" id="delay" min="1" max="5" value="3" />
             <div onclick="switchBackground()" id="switch-background"> </div>
         </div>
-            <!--<img src="img/moon.png" id="switch-background">-->
+        <!--<img src="img/moon.png" id="switch-background">-->
     </div>
     <!-- ---------------------------------------------------- -->
-    <h1>Events</h1>
-    <div id="photo-and-color">
-        <div id="select-photo" class="block">
-            <div id="photo-container">
-                <img alt="Фото студента" title="Фото" id="photo">
+    <details>
+        <summary>Image & Color</summary>
+        <h1>Events</h1>
+        <div id="photo-and-color">
+            <div id="select-photo" class="block">
+                <div id="photo-container">
+                    <img alt="Фото студента" title="Фото" id="photo">
+                </div>
+                <input type="file" id="image-file" onchange="setImage()">
             </div>
-            <input type="file" id="image-file" onchange="setImage()">
+            <!-- ---------------------------------------------------- -->
+            <br>
+            <div id="select-color" class="block">
+                <input type="color" id="choose-color" onchange="setBackground()"><label for="choose-color">Выберите Ваш любимый цвет</label>
+                <div id="color-sample"></div>
+            </div>
         </div>
-        <!-- ---------------------------------------------------- -->
-        <br>
-        <div id="select-color" class="block">
-            <input type="color" id="choose-color" onchange="setBackground()"><label for="choose-color">Выберите Ваш любимый цвет</label>
-            <div id="color-sample"></div>
+    </details>
+    <details>
+        <summary>Arrays</summary>
+        <h2>Arrays</h2>
+        <script>
+            let arr = [3, 5, 8, 13, 21];//создается массив объектов
+            console.log(arr);
+            let values = [true, false, "+", 3.14, "hello", 2.7];//создается массив объектов
+            document.write(`<pre>`);
+
+            for (let i = 0; i < values.length; i++) {
+                document.write(values[i] + "\t");
+            }
+            console.log(values);
+            document.write(`<pre>`);
+
+            let arr2 =
+                [
+                    [1, 2, 3],
+                    [4, 5, 6],
+                    [7, 8, 9]
+                ];
+            document.write(`<pre>`);
+
+            for (let i = 0; i < arr2.length; i++) {
+                document.write(arr2[i] + "\t");
+            }
+            document.writeln();
+
+            arr2.forEach(function (num, index) {
+                document.write(`Число:${num}   Индекс:${index}`);
+                document.writeln();
+            });
+            document.write(`<pre>`);
+
+            console.log(arr2);
+            console.table(arr2);
+
+            let jaggedArr =
+                [
+                    [3, 5, 8, 13, 21],
+                    ["good", "lives", "on peace", "vinni-pooh"],
+                    [34, 55, 89]
+                ];
+            document.write(`<pre>`);
+            for (let i = 0; i < jaggedArr.length; i++)
+            {
+                for (let j = 0; j < jaggedArr[i].length; j++)
+                {
+                    document.write(jaggedArr[i][j] + "\t");
+                }
+                document.writeln();
+            }
+            document.write(`<pre>`);
+
+            console.table(jaggedArr);
+
+        </script>
+    </details>
+    <div id="full-time"></div>
+    <div id="clock">
+
+        <h2>Time</h2>
+        <div id="current-time">
+            <span id="hours"></span>:
+            <span id="minutes"></span>:
+            <span id="seconds"></span>
         </div>
+        <div id="current-date">
+            <span id="year"></span>.
+            <span id="month"></span>.
+            <span id="day"></span>
+        </div>
+        <div id="day-of-week"></div>
+        <input type="checkbox" id="show-date"/><label for="show-date">Показать дату</label>
+        <input type="checkbox" id="show-weekday"/><label for="show-weekday">Показать день недели</label>
+        
     </div>
     <script src="functions.js"></script>
 </body>
