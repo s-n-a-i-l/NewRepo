@@ -20,6 +20,7 @@
         </div>
         <!--<img src="img/moon.png" id="switch-background">-->
     </div>
+
     <!-- ---------------------------------------------------- -->
     <details>
         <summary>Image & Color</summary>
@@ -39,6 +40,7 @@
             </div>
         </div>
     </details>
+    <hr />
     <details>
         <summary>Arrays</summary>
         <h2>Arrays</h2>
@@ -83,10 +85,8 @@
                     [34, 55, 89]
                 ];
             document.write(`<pre>`);
-            for (let i = 0; i < jaggedArr.length; i++)
-            {
-                for (let j = 0; j < jaggedArr[i].length; j++)
-                {
+            for (let i = 0; i < jaggedArr.length; i++) {
+                for (let j = 0; j < jaggedArr[i].length; j++) {
                     document.write(jaggedArr[i][j] + "\t");
                 }
                 document.writeln();
@@ -97,25 +97,45 @@
 
         </script>
     </details>
-    <div id="full-time"></div>
-    <div id="clock">
+    <hr />
+    <details>
+        <summary>Time</summary>
+        <div id="full-time"></div>
+        <div id="clock">
 
-        <h2>Time</h2>
-        <div id="current-time">
-            <span id="hours"></span>:
-            <span id="minutes"></span>:
-            <span id="seconds"></span>
+            
+            <div id="current-time">
+                <span id="hours"></span>:
+                <span id="minutes"></span>:
+                <span id="seconds"></span>
+            </div>
+            <div id="current-date">
+                <span id="year"></span>.
+                <span id="month"></span>.
+                <span id="day"></span>
+            </div>
+            <div id="day-of-week"></div>
+            <input type="checkbox" id="show-date" /><label for="show-date">Показать дату</label>
+            <input type="checkbox" id="show-weekday" /><label for="show-weekday">Показать день недели</label>
+
         </div>
-        <div id="current-date">
-            <span id="year"></span>.
-            <span id="month"></span>.
-            <span id="day"></span>
+    </details>
+    <hr />
+    <details>
+        <summary>Countdown Timer</summary>
+        <div id="countdown-timer">
+            <input type="date" id="target-date" value="2026-01-31" />
+            <input type="time" id="target-time" value="16:30" />
+            <input type="button" id="btn-start" value="start" />
         </div>
-        <div id="day-of-week"></div>
-        <input type="checkbox" id="show-date"/><label for="show-date">Показать дату</label>
-        <input type="checkbox" id="show-weekday"/><label for="show-weekday">Показать день недели</label>
-        
-    </div>
+        <div id="debug">
+            <div id="target-date-value"></div>
+            <div id="target-time-value"></div>
+            <div id="current-time-value"></div>
+            <div id="duration"></div>
+            <div id="timestamp"></div>
+        </div>
+    </details>
     <script src="functions.js"></script>
 </body>
 </html>

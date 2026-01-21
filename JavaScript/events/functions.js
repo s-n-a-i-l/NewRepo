@@ -82,3 +82,52 @@ document.body.onload = function tick_timer()
     document.getElementById("current-date").style.visibility = document.getElementById("show-date").checked ? "visible" : "hidden";
     document.getElementById("day-of-week").style.visibility = document.getElementById("show-weekday").checked ? "visible" : "hidden";
 }
+document.getElementById("btn-start").onclick = function startCountdownTimer()
+{
+    let targetDate = document.getElementById("target-date");
+    let targetTime = document.getElementById("target-time");
+    let btnStart = document.getElementById("btn-start");
+    if (btnStart.value == "start") {
+        btnStart.value = "stop";
+        targetDate.disabled = targetTime.disabled = true;
+        tickCountdown();
+    }
+    else
+    {
+        btnStart.value == "start";
+        targetDate.disabled = targetTime.disabled = false;
+        
+    }
+}
+function tickCountdown()
+{
+    let now = new Date();
+    let targetDateControl = document.getElementById("target-date");
+    let targetTimeControl = document.getElementById("target-time");
+
+    let targetDateValue = targetDateControl.valueAsDate;
+    let targetTimeValue = targetTimeControl.valueAsDate;
+
+    //Выравниваем часовой пояс
+    targetDateValue.setHours(targetDateValue.getHours() + targetDateValue.getTimezoneOffset() /60);
+    targetTimeValue.setHours(targetTimeValue.getHours() + targetTimeValue.getTimezoneOffset() /60);
+
+
+    document.getElementById("duration").innerHTML = typeof (targetDateValue);
+    targetTimeValue.setFullYear(targetDateValue.getFullYear());
+    targetTimeValue.setMonth(targetDateValue.getMonth());
+    targetTimeValue.setDate(targetDateValue.getDate());
+
+    document.getElementById("target-date-value").innerHTML = targetDateValue;
+    document.getElementById("target-time-value").innerHTML = targetTimeValue;
+    document.getElementById("current-time-value").innerHTML = now;
+
+    let duration = targetTimeValue - now;
+    document.getElementById("duration").innerHTML = duration;
+
+    let timestamp = Math.trunc( duration / 1000);
+
+    document.getElementById("timestamp").innerHTML = timestamp;
+
+    setTimeout(tickCountdown, 100);
+}
