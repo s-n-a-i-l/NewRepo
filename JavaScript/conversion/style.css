@@ -1,0 +1,29 @@
+﻿body
+{
+  
+}
+
+details 
+{
+    margin: 10px 0;
+}
+
+input 
+{
+    margin-right: 5px;
+    padding: 5px;
+}
+
+div[id$="-result"] 
+{
+    font-weight: bold;
+    color: green;
+    margin-top: 5px;
+    padding: 5px;
+    background: #f0f0f0;
+}
+
+input:focus 
+{
+    outline: 2px solid blue;
+}
