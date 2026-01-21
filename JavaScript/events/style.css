@@ -86,3 +86,31 @@ summary
 {
     width: 400px;
 }
+.time-block 
+{
+    border: solid 3px;
+    border-radius: 10px;
+    /*margin: 3px;*/
+    width:148px;
+    box-shadow:0px 0px 15px 5px gray;
+}
+.time-unit
+{
+    height:148px;
+    font-size:48px;
+    color:rgb(200 0 0);
+    background-color:Highlight;
+}
+.time-marker {
+    border: solid 1px;
+    background-color: darkred;
+    color:aliceblue;
+}
+#display
+{
+    border:solid 1px;
+    margin:10px;
+    padding:10px;
+    display:flex;
+    justify-content: space-around;
+}
