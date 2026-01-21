@@ -1,0 +1,86 @@
+﻿body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("fon.gif");
+    font-family: sans-serif;
+    background-size: cover;
+}
+
+.clock {
+    width: 600px;
+    height: 600px;
+    border: 6px solid #fff;
+    border-color: #00FFEF;
+    border-radius: 55%;
+    position: relative;
+    background-image: url("fc.gif");
+    background-size: cover;
+    box-shadow: 0 0 10px #00FFEF, 
+    0 0 20px #00FFEF, 2px 2px 4px rgba(0,0,0,0.9);
+}
+
+.center-dot 
+{
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.hand 
+{
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+}
+
+.hour-hand
+{
+    width: 8px;
+    height: 150px;
+    background: blue;
+    border-radius: 4px 4px 0 0;
+    margin-left: -4px;
+}
+
+.minute-hand 
+{
+    width: 6px;
+    height: 190px;
+    background: purple;
+    border-radius: 3px 3px 0 0;
+    margin-left: -3px;
+}
+
+.second-hand {
+    width: 2px;
+    height: 210px;
+    background: #00FFEF;
+    border-radius: 1px 1px 0 0;
+    margin-left: -1px;
+}
+
+.number {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    font-size: 35px;
+    font-weight: bold;
+    color: #00FFEF;
+    text-shadow: 0 0 10px #00FFEF, 
+    0 0 20px #00FFEF, 2px 2px 4px rgba(0,0,0,0.9);
+    transform-origin: 50% 130px; 
+}
+.clock 
+{
+    cursor: pointer; 
+}
