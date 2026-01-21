@@ -22,8 +22,9 @@
     </details>
     <details>
         <summary>Fibonacci</summary>
-        <input type="number" placeholder="Предел ряда чисел"/>
-        <input type="number" placeholder="Количество чисел в ряду"/>
+        <input type="number" id="fib-limit" placeholder="Предел ряда чисел" onchange="Fibonacci2()" />
+        <input type="number" id="fib-count" placeholder="Количество чисел в ряду" onchange="Fibonacci2()" />
+        <div id="fib-result"></div>
     </details>
     <script>
 

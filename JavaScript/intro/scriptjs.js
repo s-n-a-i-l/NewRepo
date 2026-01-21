@@ -40,3 +40,58 @@ function Degree(n,e)
 
     return f;
 }
+
+function Fibonacci2() {
+    let limit_field = document.getElementById("fib-limit");
+    let count_field = document.getElementById("fib-count");
+
+    let limit_value = limit_field.value;
+    let count_value = count_field.value;
+
+    let fib_result = document.getElementById("fib-result");
+
+    if (limit_value !== "") {
+        fib_result.innerHTML = FibonacciByLimit(limit_value);
+    } else if (count_value !== "") {
+        fib_result.innerHTML = FibonacciByCount(count_value);
+    } else {
+        fib_result.innerHTML = "Введите предел или количество.";
+    }
+}
+
+function FibonacciByLimit(limit) {
+    let sequence = [];
+    let a = 0n;
+    let b = 1n;
+    sequence.push(a);
+
+    while (b <= BigInt(limit)) {
+        sequence.push(b);
+        let next = a + b;
+        a = b;
+        b = next;
+    }
+
+    return Array.from(sequence).join(", ");
+}
+
+function FibonacciByCount(count) {
+    let n = parseInt(count);
+    if (n <= 0) return "0";
+
+    let sequence = [0n];
+    if (n === 1) return "0";
+
+    let a = 0n;
+    let b = 1n;
+    sequence.push(b);
+
+    for (let i = 2; i < n; i++) {
+        let next = a + b;
+        a = b;
+        b = next;
+        sequence.push(b);
+    }
+
+    return Array.from(sequence).join(", ");
+}
