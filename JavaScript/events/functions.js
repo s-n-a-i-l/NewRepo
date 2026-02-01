@@ -81,27 +81,31 @@ document.body.onload = function tick_timer()
 
     document.getElementById("current-date").style.visibility = document.getElementById("show-date").checked ? "visible" : "hidden";
     document.getElementById("day-of-week").style.visibility = document.getElementById("show-weekday").checked ? "visible" : "hidden";
+
+    setTimeout(tick_timer, 100);
 }
 document.getElementById("btn-start").onclick = function startCountdownTimer()
 {
     let targetDate = document.getElementById("target-date");
     let targetTime = document.getElementById("target-time");
     let btnStart = document.getElementById("btn-start");
-    if (btnStart.value == "start") {
-        btnStart.value = "stop";
+    if (btnStart.value == "Start")
+    {
+        btnStart.value = "Stop";
         targetDate.disabled = targetTime.disabled = true;
         tickCountdown();
     }
     else
     {
-        btnStart.value == "start";
+        btnStart.value == "Start";
         targetDate.disabled = targetTime.disabled = false;
-        
+        return;
     }
 }
 function tickCountdown()
 {
     let now = new Date();
+
     let targetDateControl = document.getElementById("target-date");
     let targetTimeControl = document.getElementById("target-time");
 
@@ -113,7 +117,7 @@ function tickCountdown()
     targetTimeValue.setHours(targetTimeValue.getHours() + targetTimeValue.getTimezoneOffset() /60);
 
 
-    document.getElementById("duration").innerHTML = typeof (targetDateValue);
+    document.getElementById("duration").innerHTML = typeof (targetTimeValue);
     targetTimeValue.setFullYear(targetDateValue.getFullYear());
     targetTimeValue.setMonth(targetDateValue.getMonth());
     targetTimeValue.setDate(targetDateValue.getDate());
@@ -126,7 +130,6 @@ function tickCountdown()
     document.getElementById("duration").innerHTML = duration;
 
     let timestamp = Math.trunc( duration / 1000);
-
     document.getElementById("timestamp").innerHTML = timestamp;
 
     const SECONDS_PER_MINUTE = 60;
