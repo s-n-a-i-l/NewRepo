@@ -124,9 +124,9 @@
     <details>
         <summary>Countdown Timer</summary>
         <div id="countdown-timer">
-            <input type="date" id="target-date" value="2026-01-31" />
+            <input type="date" id="target-date" value="2027-01-31" />
             <input type="time" id="target-time" value="16:30" />
-            <input type="button" id="btn-start" value="start" />
+            <input type="button" id="btn-start" value="Start" />
         </div>
         <div id="debug">
             <div id="target-date-value"></div>
@@ -134,7 +134,9 @@
             <div id="current-time-value"></div>
             <div id="duration"></div>
             <div id="timestamp"></div>
+            <div id="value-type"></div>
         </div>
+        <h3 id="signature"></h3>
         <div id="display">
             <div class="time-block">
                 <div id="hours-unit" class="time-unit"></div>
@@ -148,6 +150,11 @@
                 <div id="seconds-unit" class="time-unit"></div>
                 <div id="seconds-marker" class="time-marker">Seconds</div>
             </div>
+        </div>
+        <div>
+            <audio controls id="player" style="width:100%">
+                <source src="sound/Disterbed_DECODANCE.mp3">
+            </audio>
         </div>
     </details>
     <script src="functions.js"></script>
